@@ -14,6 +14,11 @@ cask "calmread" do
 
   app "CalmRead.app"
 
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-cr", "#{appdir}/CalmRead.app"]
+  end
+
   zap trash: [
     "~/Library/Application Support/calmread",
     "~/Library/Preferences/com.calmread.app.plist",
