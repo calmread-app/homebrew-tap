@@ -1,26 +1,21 @@
 cask "calmread" do
   version "1.0.0"
+  sha256 "3d8c7878d64801672067b6aef0f4fdb12bbccbd04826c70d223664c6e2cbc298"
 
-  sha256 "4349f95705fdcc3c47e17af040c7e8b9c570baf9551538910dc72ca8445bbf27"
-  url "https://github.com/calmread-app/CalmRead/releases/download/v#{version}/CalmRead-darwin-arm64-#{version}.zip",
+  url "https://github.com/calmread-app/CalmRead/releases/download/v1.0.0/CalmRead-darwin-arm64-1.0.0.zip",
       verified: "github.com/calmread-app/CalmRead/"
 
   name "CalmRead"
-  desc "A calm and focused document reader for texts, markdown, EPUB, DOCX, and CSV files"
+  desc "Calm, focused document reader for TXT, Markdown, EPUB, DOCX, CSV, and HTML"
   homepage "https://calmread.app"
 
   depends_on macos: ">= :monterey"
-  depends_on arch: :arm64
 
   app "CalmRead.app"
 
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-cr", "#{appdir}/CalmRead.app"]
-  end
-
   zap trash: [
-    "~/Library/Application Support/calmread",
+    "~/Library/Application Support/CalmRead",
     "~/Library/Preferences/com.calmread.app.plist",
+    "~/Library/Caches/com.calmread.app",
   ]
 end
