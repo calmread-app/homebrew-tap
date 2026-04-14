@@ -1,8 +1,8 @@
 cask "calmread" do
-  version "1.0.0"
-  sha256 "3c07a16c721a2907cab3731a7ffdd166a930f660e6dd492d5dcedf60f5466dc5"
+  version "1.0.1"
+  sha256 "18d31f83c51e44b7968e3edc7441fcd409970c0c668bd444546f9e2bb9c2b4cd"
 
-  url "https://github.com/calmread-app/CalmRead/releases/download/v1.0.0/CalmRead-darwin-arm64-1.0.0.zip",
+  url "https://github.com/calmread-app/CalmRead/releases/download/v1.0.1/CalmRead-darwin-arm64-1.0.1.zip",
       verified: "github.com/calmread-app/CalmRead/"
 
   name "CalmRead"
